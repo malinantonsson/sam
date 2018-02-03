@@ -6,7 +6,7 @@
 
 			<h1><?php the_title(); ?></h1>
 
-      <div class="content">
+      <div class="content<?php if(get_field('column_order')) { echo ' content--reverse'; } ?>">
     		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
     			<!-- article -->

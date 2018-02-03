@@ -1,0 +1,17 @@
+.submit__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.wpcf7-submit {
+  background-color: #fff;
+  border: 1px solid #000;
+  padding: 10px 2rem;
+}
+
+div.wpcf7-validation-errors {
+  border-color: #F44336;
+}

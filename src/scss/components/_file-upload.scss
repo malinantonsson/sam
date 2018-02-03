@@ -28,5 +28,10 @@
     display: inline-block;
     cursor: pointer;
     padding: 10px 2rem;
+
+    @media(max-width: 768px) {
+      width: 100%;
+      text-align: center;
+    }
   }
 }
