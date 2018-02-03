@@ -1,0 +1,18 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+
+  &__logo {
+    max-width: 200px;
+  }
+
+  ul {}
+}
+
+.menu-item {
+  display: inline-flex;
+  padding: 10px 1rem;
+  font-size: 1rem;
+  border: 1px solid;
+}

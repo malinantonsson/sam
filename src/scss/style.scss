@@ -8,12 +8,13 @@ Template: html5blank-stable
 Version: 0.1
 */
 
-@import 'reset';
+@import 'components/index';
 
-body {
-  background-color: black;
+html {
+  font-size: 100%;
 }
 
-main {
-  background: blue;
+body {
+  font-size: 16px;
+  font-size: 1rem;
 }
