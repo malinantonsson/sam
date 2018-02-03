@@ -8,7 +8,11 @@ Template: html5blank-stable
 Version: 0.1
 */
 
+@import '_color';
+@import '_variables';
 @import 'components/index';
+@import 'components/_file-upload';
+@import 'forms/main';
 
 html {
   font-size: 100%;

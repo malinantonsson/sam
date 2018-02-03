@@ -1,1 +1,2 @@
-console.log('js is on');
+import { fileUploads } from './modules/file-upload';
+fileUploads();

@@ -1,0 +1,32 @@
+.file-upload {
+  display: flex;
+  align-items: center;
+
+  & + & {
+    display: none;
+  }
+
+  &--is-complete + & {
+    display: flex;
+    margin-top: 1rem;
+  }
+
+  &__field {
+    width: 0.1px;
+  	height: 0.1px;
+  	opacity: 0;
+  	overflow: hidden;
+  	position: absolute;
+  	z-index: -1;
+  }
+
+  .wpcf7-form-control-wrap ~ &__button {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: white;
+    background-color: $input-focus-color;
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px 2rem;
+  }
+}
