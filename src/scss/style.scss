@@ -1,0 +1,19 @@
+/*
+Theme Name: html5blank-stable-child
+Theme URI: http: //mysite.com/
+Description: This is a custom child theme I have created.
+Author: Malin Antonsson
+Author URI: http: //malinantonsson.com
+Template: html5blank-stable
+Version: 0.1
+*/
+
+@import 'reset';
+
+body {
+  background-color: black;
+}
+
+main {
+  background: blue;
+}
