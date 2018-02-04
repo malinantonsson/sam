@@ -40,17 +40,31 @@
       var fileUploadsButton = document.querySelectorAll('.file-upload');
 
       if (fileUploads) {
-        var fileUploadsArray = [].concat(_toConsumableArray(fileUploadsButton));
-        fileUploadsArray.map(function (field) {
-          field.addEventListener('change', function (e) {
-            field.classList.add('file-upload--is-complete');
-            var fileName = e.target.value.split('\\').pop();
+        (function () {
+          var orgLabel = document.querySelector('.file-upload__label').innerHTML;
+          var fileUploadsArray = [].concat(_toConsumableArray(fileUploadsButton));
 
-            if (fileName) {
-              field.querySelector('.file-upload__label').innerHTML = fileName;
-            }
+          fileUploadsArray.map(function (field) {
+            field.addEventListener('change', function (e) {
+              field.classList.add('file-upload--is-complete');
+              var fileName = e.target.value.split('\\').pop();
+              if (fileName) {
+                field.querySelector('.file-upload__label').innerHTML = fileName;
+              }
+            });
           });
-        });
+
+          var wpcf7Elm = document.querySelector('.wpcf7');
+
+          wpcf7Elm.addEventListener('wpcf7submit', function (event) {
+            alert("Fire!");
+
+            fileUploadsArray.map(function (field) {
+              field.classList.remove('file-upload--is-complete');
+              field.querySelector('.file-upload__label').innerHTML = orgLabel;
+            });
+          }, false);
+        })();
       }
     }
   }, {}] }, {}, ["/Users/malinantonsson/Dev/projects/mamp/sam/wp-content/themes/html5blank-stable-child/src/scripts/app.js"]);
