@@ -10,7 +10,7 @@
     		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
     			<!-- article -->
-    			<div class="content__col">
+    			<div class="content__col rtc">
 
     				<?php the_content(); ?>
 
@@ -18,7 +18,7 @@
           <?php
             if(get_field('second_column'))
               {
-              	echo '<div class="content__col">' . get_field('second_column') . '</div>';
+              	echo '<div class="content__col rtc">' . get_field('second_column') . '</div>';
               }
           ?>
     			<!-- /article -->

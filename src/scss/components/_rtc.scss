@@ -1,0 +1,9 @@
+.rtc {
+  a {
+    color: $input-focus-color; 
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
