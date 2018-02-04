@@ -11,6 +11,8 @@ export function fileUploads() {
     			const fileName = e.target.value.split( '\\' ).pop();
       		if( fileName ) {
             field.querySelector('.file-upload__label').innerHTML = fileName;
+          } else {
+            field.querySelector('.file-upload__label').innerHTML = orgLabel;
           }
     	});
     });

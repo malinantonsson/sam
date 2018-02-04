@@ -1,6 +1,12 @@
 .file-upload {
   display: flex;
-  align-items: center;
+  flex-direction: column-reverse;
+  //align-items: center;
+  align-items: flex-start;
+
+  @media(min-width: 769px) {
+    //flex-direction: row;
+  }
 
   & + & {
     display: none;
