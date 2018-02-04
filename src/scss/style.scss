@@ -14,6 +14,8 @@ Version: 0.1
 @import 'components/_file-upload';
 @import 'forms/main';
 
+$header-height: 100px;
+
 html {
   font-size: 100%;
 }
@@ -21,4 +23,13 @@ html {
 body {
   font-size: 16px;
   font-size: 1rem;
+  overflow-x: hidden;
+  padding-top: $header-height;
+
+  .alignnone {
+    @media(max-width: 768px) {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
 }

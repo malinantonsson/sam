@@ -1,7 +1,7 @@
 export function fileUploads() {
   const fileUploadsButton = document.querySelectorAll('.file-upload');
 
-  if(fileUploads) {
+  if(fileUploadsButton.length > 0) {
     const orgLabel = document.querySelector('.file-upload__label').innerHTML;
     const fileUploadsArray = [...fileUploadsButton];
 
@@ -18,8 +18,6 @@ export function fileUploads() {
     const wpcf7Elm = document.querySelector( '.wpcf7' );
 
     wpcf7Elm.addEventListener( 'wpcf7submit', function( event ) {
-        alert( "Fire!" );
-
         fileUploadsArray.map(field => {
           field.classList.remove('file-upload--is-complete');
           field.querySelector('.file-upload__label').innerHTML = orgLabel;

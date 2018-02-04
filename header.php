@@ -24,15 +24,12 @@
 
 	</head>
 	<body <?php body_class(); ?>>
+		<!-- header -->
+		<header class="header clear" role="banner">
+			<div class="wrapper">
 
-		<!-- wrapper -->
-		<div class="wrapper">
-
-			<!-- header -->
-			<header class="header clear" role="banner">
-
-        <!-- nav -->
-        <nav class="nav" role="navigation">
+				<!-- nav -->
+				<nav class="nav" role="navigation">
 					<div class="nav__logo">
 						<a href="<?php echo home_url(); ?>">
 							<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" alt="Logo" class="logo-img">
@@ -43,6 +40,10 @@
 						<?php html5blank_nav(); ?>
 					</nav>
 					<!-- /nav -->
+				</div>
 
-			</header>
-			<!-- /header -->
+		</header>
+		<!-- /header -->
+
+		<!-- wrapper -->
+		<div class="wrapper">
