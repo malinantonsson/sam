@@ -8,12 +8,12 @@ Template: html5blank-stable
 Version: 0.1
 */
 
-@import '_color';
-@import '_variables';
-@import 'components/index';
-@import 'components/_file-upload';
-@import 'components/_rtc';
-@import 'forms/main';
+@import "_color";
+@import "_variables";
+@import "components/index";
+@import "components/_file-upload";
+@import "components/_rtc";
+@import "forms/main";
 
 $header-height: 100px;
 
@@ -28,9 +28,19 @@ body {
   padding-top: $header-height;
 
   .alignnone {
-    @media(max-width: 768px) {
+    @media (max-width: 768px) {
       margin-right: 0;
       margin-left: 0;
     }
+  }
+}
+
+.align-img-link {
+  display: flex;
+  align-items: center;
+
+  &__image {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
   }
 }
