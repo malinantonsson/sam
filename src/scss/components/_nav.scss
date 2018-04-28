@@ -1,20 +1,156 @@
+$tablet-max: 767px;
+$tablet: 768px;
+
 .nav {
   display: flex;
   justify-content: space-between;
   padding: 10px 0;
+  flex-wrap: nowrap;
+
+  @media (max-width: $tablet-max) {
+    flex-wrap: wrap;
+  }
 
   &__logo {
     max-width: 200px;
     display: flex;
     align-items: center;
+    flex: 0 1 auto;
   }
 
-  ul {}
+  &__toggle {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+
+    .nav-toggle__opened {
+      display: none;
+    }
+
+    &--open {
+      .nav-toggle__opened {
+        display: block;
+      }
+
+      .nav-toggle__closed {
+        display: none;
+      }
+    }
+
+    @media (min-width: $tablet) {
+      display: none;
+    }
+  }
+
+  .nav__nav {
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: flex-end;
+
+    > ul {
+      display: inline-block;
+    }
+
+    @media (max-width: $tablet-max) {
+      display: none;
+      flex-direction: column;
+      flex: 1 0 100%;
+      align-items: center;
+      padding-left: 0;
+
+      > ul {
+        display: flex;
+        flex-direction: column;
+        flex: 1 0 100%;
+        align-items: center;
+        padding-left: 0;
+      }
+
+      &.nav__nav--open {
+        display: flex;
+      }
+    }
+  }
 }
 
 .menu-item {
   display: inline-flex;
   padding: 10px 1rem;
   font-size: 1rem;
-  border: 1px solid;
+  position: relative;
+  text-align: center;
+  align-items: center;
+
+  &:last-child {
+    border: 1px solid;
+    @media (max-width: $tablet-max) {
+      margin-top: 10px;
+    }
+  }
+}
+
+.menu-item-has-children {
+  flex-direction: column;
+
+  @media (min-width: $tablet-max) {
+    margin-right: 1rem;
+    padding-right: 2rem;
+  }
+
+  &:after {
+    content: "\232A";
+    transform: rotate(90deg);
+    transform-origin: right;
+    position: absolute;
+    top: 1.4rem;
+    right: 0;
+
+    @media (min-width: $tablet) {
+      top: 50%;
+      right: 1.2rem;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    .sub-menu {
+      display: flex;
+    }
+  }
+}
+.sub-menu {
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  padding-left: 0;
+  width: 100%;
+  top: 42px;
+  align-items: center;
+  border-radius: 5px;
+  background: white;
+
+  @media (min-width: $tablet-max) {
+    border: 1px solid;
+    position: absolute;
+    display: none;
+
+    &:before {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 5px solid black;
+      position: absolute;
+      top: -5px;
+    }
+  }
+
+  .menu-item {
+    &:last-child {
+      border: none;
+      margin-top: 0;
+    }
+  }
 }

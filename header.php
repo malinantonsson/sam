@@ -36,8 +36,16 @@
 						</a>
 					</div>
 					<!-- /logo -->
+					<div class="nav__toggle">
+						<div class="nav-toggle">
+							<div class="nav-toggle__closed">☰</div>
+							<div class="nav-toggle__opened">×</div>
+						</div>
+					</div>
 
-						<?php html5blank_nav(); ?>
+						<div class="nav__nav">
+							<?php html5blank_nav(); ?>
+						</div>
 					</nav>
 					<!-- /nav -->
 				</div>

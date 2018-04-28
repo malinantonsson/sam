@@ -13,15 +13,18 @@
     s(r[o]);
   }return s;
 })({ "/Users/malinantonsson/Dev/projects/mamp/sam/wp-content/themes/html5blank-stable-child/src/scripts/app.js": [function (require, module, exports) {
-    'use strict';
+    "use strict";
 
-    var _modulesFileUpload = require('./modules/file-upload');
+    var _modulesFileUpload = require("./modules/file-upload");
 
-    var _modulesNavScroll = require('./modules/nav-scroll');
+    var _modulesNavScroll = require("./modules/nav-scroll");
+
+    var _modulesNavToggle = require("./modules/nav-toggle");
 
     (0, _modulesFileUpload.fileUploads)();
     (0, _modulesNavScroll.navScroll)();
-  }, { "./modules/file-upload": "/Users/malinantonsson/Dev/projects/mamp/sam/wp-content/themes/html5blank-stable-child/src/scripts/modules/file-upload.js", "./modules/nav-scroll": "/Users/malinantonsson/Dev/projects/mamp/sam/wp-content/themes/html5blank-stable-child/src/scripts/modules/nav-scroll.js" }], "/Users/malinantonsson/Dev/projects/mamp/sam/wp-content/themes/html5blank-stable-child/src/scripts/modules/file-upload.js": [function (require, module, exports) {
+    (0, _modulesNavToggle.navToggle)();
+  }, { "./modules/file-upload": "/Users/malinantonsson/Dev/projects/mamp/sam/wp-content/themes/html5blank-stable-child/src/scripts/modules/file-upload.js", "./modules/nav-scroll": "/Users/malinantonsson/Dev/projects/mamp/sam/wp-content/themes/html5blank-stable-child/src/scripts/modules/nav-scroll.js", "./modules/nav-toggle": "/Users/malinantonsson/Dev/projects/mamp/sam/wp-content/themes/html5blank-stable-child/src/scripts/modules/nav-toggle.js" }], "/Users/malinantonsson/Dev/projects/mamp/sam/wp-content/themes/html5blank-stable-child/src/scripts/modules/file-upload.js": [function (require, module, exports) {
     'use strict';
 
     Object.defineProperty(exports, '__esModule', {
@@ -120,5 +123,26 @@
           onTop();
         }
       });
+    }
+  }, {}], "/Users/malinantonsson/Dev/projects/mamp/sam/wp-content/themes/html5blank-stable-child/src/scripts/modules/nav-toggle.js": [function (require, module, exports) {
+    "use strict";
+
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    exports.navToggle = navToggle;
+
+    function navToggle() {
+      var navToggle = document.querySelector(".nav__toggle");
+      var navWrapper = document.querySelector(".nav__nav");
+      var navIsOpenClass = "nav__nav--open";
+      var navToggleOpenClass = "nav__toggle--open";
+
+      if (navToggle) {
+        navToggle.addEventListener("click", function () {
+          navWrapper.classList.toggle(navIsOpenClass);
+          navToggle.classList.toggle(navToggleOpenClass);
+        });
+      }
     }
   }, {}] }, {}, ["/Users/malinantonsson/Dev/projects/mamp/sam/wp-content/themes/html5blank-stable-child/src/scripts/app.js"]);

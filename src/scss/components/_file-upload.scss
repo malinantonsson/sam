@@ -1,12 +1,9 @@
+$white: #fff;
+
 .file-upload {
   display: flex;
   flex-direction: column-reverse;
-  //align-items: center;
   align-items: flex-start;
-
-  @media(min-width: 769px) {
-    //flex-direction: row;
-  }
 
   & + & {
     display: none;
@@ -19,23 +16,23 @@
 
   &__field {
     width: 0.1px;
-  	height: 0.1px;
-  	opacity: 0;
-  	overflow: hidden;
-  	position: absolute;
-  	z-index: -1;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
   }
 
   .wpcf7-form-control-wrap ~ &__button {
     font-size: 1.25em;
     font-weight: 700;
-    color: #fff;
+    color: $white;
     background-color: $input-focus-color;
     display: inline-block;
     cursor: pointer;
     padding: 10px 2rem;
 
-    @media(max-width: 768px) {
+    @media (max-width: 768px) {
       width: 100%;
       text-align: center;
     }
